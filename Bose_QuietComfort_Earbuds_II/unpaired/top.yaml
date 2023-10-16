@@ -1,0 +1,27 @@
+recording_date: August 21, 2023
+device:
+  device_type: SDR
+  model: USRP X310
+  Dboard: CBX-120
+  Attenuator: 30dB
+  antenna: 30cm vertical
+  uhd_version: 4.1.0.5-3
+  sample_rate: 100000000
+  center_frequency: 2441500000
+  gain: 0
+  output_file: ./radio.data
+wearable_device:
+  name: Bose QuietComfort Earbuds II
+  android_app: 
+  android_app_version:
+  bluetooth_version: 5.3
+recording_duration: '30.0'
+recording_timeline_description:
+  enabling_Bluetooth_on_smartphone: '1.581'
+  Bluetooth_connection_established: '10.231'
+  start_data_exchange: '19.924'
+  stop_data_exchange: '24.992'
+  disconnected: '26.114'
+recording_location: EDI
+event_description: Advertising, pairing, data exchange (audio streaming), disconnecting between Bose QuietComfort Earbuds II and Samsung S20 FE smartphone when devices have not been previously paired.
+file_format: numpy.complex64

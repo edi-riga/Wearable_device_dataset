@@ -1,0 +1,27 @@
+recording_date: September 04, 2023
+device:
+  device_type: SDR
+  model: USRP X310
+  Dboard: CBX-120
+  Attenuator: 30dB
+  antenna: 30cm vertical
+  uhd_version: 4.1.0.5-3
+  sample_rate: 100000000
+  center_frequency: 2441500000
+  gain: 0
+  output_file: ./radio.data
+wearable_device:
+  name: BT headphones black
+  android_app: 
+  android_app_version:
+  bluetooth_version: unknown
+recording_duration: '30.0'
+recording_timeline_description:
+  enabling_Bluetooth_on_smartphone: '3.667'
+  Bluetooth_connection_established: '15.194'
+  start_data_exchange: '20.665'
+  stop_data_exchange: '25.809'
+  disconnected: '27.009'
+recording_location: EDI
+event_description: Advertising, pairing, data exchange (audio streaming), disconnecting between BT headphones black and Samsung S20 FE smartphone when devices have not been previously paired.
+file_format: numpy.complex64

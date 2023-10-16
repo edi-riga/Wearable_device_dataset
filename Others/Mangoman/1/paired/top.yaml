@@ -1,0 +1,27 @@
+recording_date: September 05, 2023
+device:
+  device_type: SDR
+  model: USRP X310
+  Dboard: CBX-120
+  Attenuator: 30dB
+  antenna: 30cm vertical
+  uhd_version: 4.1.0.5-3
+  sample_rate: 100000000
+  center_frequency: 2441500000
+  gain: 0
+  output_file: ./radio.data
+wearable_device:
+  name: Mangoman (1)
+  android_app: 
+  android_app_version:
+  bluetooth_version: unknown
+recording_duration: '30.0'
+recording_timeline_description:
+  enabling_Bluetooth_on_smartphone: '1.773'
+  Bluetooth_connection_established: '5.177'
+  start_data_exchange: '12.476'
+  stop_data_exchange: '17.602'
+  disconnected: '18.784'
+recording_location: EDI
+event_description: Advertising, pairing, data exchange (audio streaming), disconnecting between Mangoman (1) and Samsung S20 FE smartphone when devices have been previously paired.
+file_format: numpy.complex64

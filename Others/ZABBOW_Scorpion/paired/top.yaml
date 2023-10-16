@@ -1,0 +1,27 @@
+recording_date: September 15, 2023
+device:
+  device_type: SDR
+  model: USRP X310
+  Dboard: CBX-120
+  Attenuator: 30dB
+  antenna: 30cm vertical
+  uhd_version: 4.1.0.5-3
+  sample_rate: 100000000
+  center_frequency: 2441500000
+  gain: 0
+  output_file: ./radio.data
+wearable_device:
+  name: ZABBOW Scorpion
+  android_app: 
+  android_app_version:
+  bluetooth_version: unknown
+recording_duration: '30.0'
+recording_timeline_description:
+  enabling_Bluetooth_on_smartphone: '3.546'
+  Bluetooth_connection_established: '6.806'
+  start_data_exchange: '14.922'
+  stop_data_exchange: '19.982'
+  disconnected: '21.114'
+recording_location: EDI
+event_description: Advertising, pairing, data exchange (audio streaming), disconnecting between ZABBOW Scorpion and Samsung S20 FE smartphone when devices have been previously paired.
+file_format: numpy.complex64

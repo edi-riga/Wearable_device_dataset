@@ -1,0 +1,21 @@
+recording_date: September 15, 2023
+device:
+  device_type: SDR
+  model: USRP X310
+  Dboard: CBX-120
+  Attenuator: 30dB
+  antenna: 30cm vertical
+  uhd_version: 4.1.0.5-3
+  sample_rate: 100000000
+  center_frequency: 2441500000
+  gain: 0
+  output_file: ./radio.data
+recording_duration: '30.0'
+recording_timeline_description:
+  enabling_Wi-Fi_on_smartphone: '2.480'
+  Wi-Fi_connection_established: '9.922'
+  start_broadcasting_video: '25.740'
+  disconnected: '29.214'
+recording_location: EDI
+event_description: Advertising, pairing, data exchange, disconnecting between HD IOT Camera (Wi-Fi) and Samsung S20 FE smartphone.
+file_format: numpy.complex64

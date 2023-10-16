@@ -1,0 +1,27 @@
+recording_date: September 06, 2023
+device:
+  device_type: SDR
+  model: USRP X310
+  Dboard: CBX-120
+  Attenuator: 30dB
+  antenna: 30cm vertical
+  uhd_version: 4.1.0.5-3
+  sample_rate: 100000000
+  center_frequency: 2441500000
+  gain: 0
+  output_file: ./radio.data
+wearable_device:
+  name: Redmi Buds 3 (4)
+  android_app: 
+  android_app_version:
+  bluetooth_version: 5.0
+recording_duration: '30.0'
+recording_timeline_description:
+  enabling_Bluetooth_on_smartphone: '1.840'
+  Bluetooth_connection_established: '15.067'
+  start_data_exchange: '20.886'
+  stop_data_exchange: '26.017'
+  disconnected: '27.200'
+recording_location: EDI
+event_description: Advertising, pairing, data exchange (audio streaming), disconnecting between Redmi Buds 3 (4) and Samsung S20 FE smartphone when devices have not been previously paired.
+file_format: numpy.complex64
