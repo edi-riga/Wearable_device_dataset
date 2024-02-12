@@ -1,0 +1,48 @@
+recording_date: November 21, 2023
+recording_location: EDI
+recording_device:
+  device_type: SDR
+  model: USRP X310
+  daughterboard: CBX-120
+  attenuator: 30dB
+  antenna: 30cm vertical
+  uhd_version: 4.1.0.5-3
+  sample_rate: 100000000
+  center_frequency: 2441500000
+  gain: 0
+  DC_correction: 'OFF'
+  output_file: ./radio.data
+wearable_device:
+  device_type: smartwatch/smartband
+  model: Garmin Instinct Crossover
+  BD_ADDR: ''
+  bluetooth_version: 5.0
+  android_app: Connect
+  android_app_version: '4.70'
+master_device:
+  device_type: smartphone
+  model: Samsung Galaxy S20 FE
+  BD_ADDR: 34:82:C5:37:DC:48
+  bluetooth_version: 5.0
+recording_duration_seconds: 16.926
+recording_timeline_description:
+  enabling_Bluetooth_on_smartphone: 1.314
+  disconnected: 14.920
+event_scenario: ''
+event_description: Advertising, pairing, data exchange (open app and check for Garmin Instinct Crossover information, heart rate information gets sent over Bluetooth), disconnecting between Garmin Instinct Crossover and Samsung Galaxy S20 FE smartphone.
+file_format: numpy.complex64
+channelized_data:
+  channels_25:
+    output_file_ch25: [process/radio_25_0.chdata, process/radio_25_1.chdata, process/radio_25_2.chdata, process/radio_25_3.chdata]
+    sample_rate_ch25: 25000000
+    center_frequency_ch25: [2471500000, 2451500000, 2431500000, 2411500000]
+  channels_05:
+    output_file_ch05: [process/radio_05_0_0.chdata, process/radio_05_0_1.chdata, process/radio_05_0_2.chdata, process/radio_05_0_3.chdata, process/radio_05_0_4.chdata,
+                       process/radio_05_1_0.chdata, process/radio_05_1_1.chdata, process/radio_05_1_2.chdata, process/radio_05_1_3.chdata, process/radio_05_1_4.chdata,
+                       process/radio_05_2_0.chdata, process/radio_05_2_1.chdata, process/radio_05_2_2.chdata, process/radio_05_2_3.chdata, process/radio_05_2_4.chdata,
+                       process/radio_05_3_0.chdata, process/radio_05_3_1.chdata, process/radio_05_3_2.chdata, process/radio_05_3_3.chdata, process/radio_05_3_4.chdata]
+    sample_rate_ch05: 5000000
+    center_frequency_ch05: [2477500000, 2474500000, 2471500000, 2468500000, 2465500000,
+                            2457500000, 2454500000, 2451500000, 2448500000, 2445500000,
+                            2437500000, 2434500000, 2431500000, 2428500000, 2425500000,
+                            2417500000, 2414500000, 2411500000, 2408500000, 2405500000]

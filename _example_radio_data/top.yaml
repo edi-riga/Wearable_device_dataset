@@ -1,27 +1,42 @@
 recording_date: August 31, 2023
-device:
+recording_location: EDI
+recording_device:
   device_type: SDR
   model: USRP X310
-  Dboard: CBX-120
-  Attenuator: 30dB
+  daughterboard: CBX-120
+  attenuator: 30dB
   antenna: 30cm vertical
   uhd_version: 4.1.0.5-3
   sample_rate: 100000000
   center_frequency: 2441500000
   gain: 0
+  DC_correction: 'OFF'
   output_file: ./radio.data
 wearable_device:
-  name: Samsung Galaxy S20FE
-  android_app:
+  device_type: 
+  model: 
+  BD_ADDR: 
+  bluetooth_version: 
+  android_app: 
   android_app_version:
+master_device:
+  device_type: smartphone
+  model: Samsung Galaxy S20 FE
+  BD_ADDR: 34:82:C5:37:DC:48
   bluetooth_version: 5.0
-recording_duration: '0.003'
+recording_duration_seconds: 0.003
 recording_timeline_description:
-  enabling_Bluetooth_on_smartphone: '0'
-  Bluetooth_connection_established:
-  start_data_exchange:
-  stop_data_exchange:
+  enabling_Bluetooth_on_smartphone:
   disconnected:
-recording_location: EDI
+event_scenario: ''
 event_description: THIS IS SMALL EXAMPLE RADIO RECORDING. Contains 6 Bluetooth waveforms from Samsung smartphone in Bluetooth advertising mode. This radio recording is cut out of Sony_WH-1000XM5/unpaired/radio.data starting from 0.187s until 0.190s.
 file_format: numpy.complex64
+channelized_data:
+  channels_25:
+    output_file_ch25: []
+    sample_rate_ch25: 25000000
+    center_frequency_ch25: []
+  channels_05:
+    output_file_ch05: []
+    sample_rate_ch05: 5000000
+    center_frequency_ch05: []
