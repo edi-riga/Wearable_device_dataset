@@ -9,7 +9,7 @@ pip3 install -r requirements.txt
 python3 plot_data.py /path/to/top.yaml
 ```
 ```console
-python3 plot_data.py _example_radio_data/top.yaml 
+$ python3 plot_data.py _example_radio_data/top.yaml 
 Choose a file to load:
 1. Channels_05 data (Channelized 5 MHz Bandwidth)
 2. Channels_25 data (Channelized 25 MHz Bandwidth)
@@ -26,8 +26,9 @@ Connection Timestamps:
 Enter the start time (in seconds): 0
 Enter the stop time (in seconds): 0.003
 ```
-
-PICTURE HERE
+<p align="center">
+<img src="_example_radio_data/example_waveform.png" width=60% height=60%>
+</p>
 
 ## Metadata structure
 
