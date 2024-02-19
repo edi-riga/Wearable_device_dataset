@@ -1,13 +1,14 @@
 # Bluetooth Wearable Device Dataset
-This repository contains metadata and usage examples of radio recordings from wearable devices, captured using SDR in an RF isolated environment. The raw data recordings can be accessed from ... . Each recording is accompanied by its own metadata file (top.yaml), detailing its production process and parameters.
-
-You can find example radio recording in the _example_radio_data/ folder.
+This repository contains metadata and usage examples of radio recordings from wearable devices, captured using SDR in an RF isolated environment. The raw data recordings can be accessed from ... . Each recording is accompanied by its own metadata file (top.yaml), detailing its production process and parameters and JSON file which contains decoded bits and information regarding its Bluetooth parameters.
 
 ## Example usage
+This repository provides two usage examples tailored to visualize the dataset. For practical demonstrations, smaller sample files are located within the _example_radio_data/ folder. These 2 useage examples will also work with the rest of the dataset.
 ```
 pip3 install -r requirements.txt
 python3 plot_data.py /path/to/top.yaml
+python3 demodulated_data.py
 ```
+The first example demonstrates the visualization of physical waveforms from the dataset. 
 ```console
 $ python3 plot_data.py _example_radio_data/top.yaml 
 Choose a file to load:
@@ -27,12 +28,79 @@ Enter the start time (in seconds): 0
 Enter the stop time (in seconds): 0.003
 ```
 <p align="center">
-<img src="_example_radio_data/example_waveform.png" width=60% height=60%>
+<img src="_example_radio_data/example_waveform.png" width=75% height=60%>
 </p>
+
+The second example showcases demodulated and decoded results extracted from the radio recordings within the dataset. It will search whole datasete for JSON files and promt user to pick one of them.
+
+While providing valuable insights into the wireless traffic, it's important to note that we used our own methods to decode the data and the results may not fully represent all traffic present. For instance, PSK demodulation, commonly used by Bluetooth devices, is not done in our processing and thus not included in the results.
+
+```console
+$ python3 demodulated_data.py
+Select a JSON file to load:
+1. ./_example_radio_data/_example_recording.json
+Enter the number corresponding to the file you want to load: 1
+Number of all packets: 4423
+
+Enter the packet number you want to load (or 'q' to quit): 100
+Packet 100:
+sample_file: Beats_Solo3_Wireless/recording_1/paired/process/radio_05_0_0.chdata
+left: 9275654
+right: 9276055
+length: 401
+signal_max: 0.0015004
+signal_mean: 0.0013458756
+payload_std: -1.0
+index_25: 0
+index_5: 0
+local_freq: 1483.7905236908
+demod_start: 39
+bits: 01010100011101011100010110001100110001110011001101000101111001110010
+packet_lt_addr: None
+packet_type: ID  
+packet_flow: None
+packet_arqn: None
+packet_seqn: None
+packet_hec: None
+packet_id: True
+header_fec: 0.0
+clock: 9275693
+lap: 110011001101000101111001
+comment: 
+header: None
+```
+
+| Field          | Description                                          |
+|----------------|------------------------------------------------------|
+| Packet         | Packet number detected within radio recording        |
+| sample_file    | Path to the sample file containing the origin recording |
+| left           | Starting sample in sample_file for this packet       |
+| right          | Ending sample in sample_file for this packet         |
+| length         | right - left, length of packet in samples            |
+| signal_max     | Maximum amplitude of detected packet                 |
+| signal_mean    | Signal mean                                          |
+| payload_std    | Standard deviation of the payload                    |
+| index_25       | Which of the four 25 MHZ channelized recordings      |
+| index_5        | Which of the five 5 MHZ channelized recordings       |
+| local_freq     | Local frequency in the channelized radio data        |
+| demod_start    | Sample index when was GFSK demod started             |
+| bits           | Decoded bits (if available)                          |
+| packet_lt_addr | Bluetooth logical transport address                  |
+| packet_type    | Header TYPE field                                    |
+| packet_flow    | Header FLOW field                                    |
+| packet_arqn    | Header ARQN field                                    |
+| packet_seqn    | Header SEQN field                                    |
+| packet_hec     | Header HEC field                                     |
+| packet_id      |                                                      |
+| header_fec     |                                                      |
+| clock          |                                                      |
+| lap            | LAP (lower address part)                             |
+| comment        | Additional comments (if any)                         |
+| header         | Packet header                                        |
 
 ## Metadata structure
 
-### Recording Details
+#### Recording Details
 
 - **Recording Date:** Date of the recording.
 - **Recording Location:** Location where the recording took place.
@@ -49,26 +117,26 @@ Enter the stop time (in seconds): 0.003
 
 - Details about the master device involved in the recording. 
 
-### Recording Duration
+#### Recording Duration
 
 - Duration of the recording in seconds.
 
-### Recording Timeline Description
+#### Recording Timeline Description
 
 - Timestamps of specific events during the recording process. 
 
-### Event Scenario
+#### Event Scenario
 
 - Whether or not the Wearable device was paired to Master Device before the recording.
 
-### Event Desription
+#### Event Desription
 
 - Description of events that occurred during the recording.
 
-### File Format
+#### File Format
 
 - Format of the recorded data files.
 
-### Channelized Data
+#### Channelized Data
 
 - Information about the channelized data. 
