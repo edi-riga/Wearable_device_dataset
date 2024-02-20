@@ -1,0 +1,36 @@
+recording_date: December 11, 2023
+recording_location: EDI
+recording_device:
+  device_type: SDR
+  model: USRP X310
+  daughterboard: CBX-120
+  attenuator: 30dB
+  antenna: 30cm vertical
+  uhd_version: 4.1.0.5-3
+  sample_rate: 100000000
+  center_frequency: 2441500000
+  gain: 0
+  DC_correction: 'OFF'
+  output_file: ./radio.data
+wearable_device:
+  device_type: headphones
+  model: I7-TWS
+  BD_ADDR: ''
+  bluetooth_version: unknown
+  android_app: ''
+  android_app_version: ''
+master_device:
+  device_type: smartphone
+  model: Samsung Galaxy S20 FE
+  BD_ADDR: 34:82:C5:37:DC:48
+  bluetooth_version: 5.0
+recording_duration_seconds: 18.303
+recording_timeline_description:
+  enabling_Bluetooth_on_smartphone: 1.437
+  Bluetooth_connection_established: 4.742
+  start_data_exchange: 10.099
+  stop_data_exchange: 15.176
+  disconnected: 16.299
+event_scenario: paired
+event_description: Advertising, pairing, data exchange (audio streaming), disconnecting between I7-TWS and Samsung Galaxy S20 FE smartphone when devices have been previously paired.
+file_format: numpy.complex64

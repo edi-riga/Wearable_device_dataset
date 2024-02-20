@@ -31,7 +31,7 @@ Enter the stop time (in seconds): 0.003
 <img src="_example_radio_data/example_waveform.png" width=75% height=60%>
 </p>
 
-The second example showcases demodulated and decoded results extracted from the radio recordings within the dataset. It will search whole datasete for JSON files and promt user to pick one of them.
+The second example showcases demodulated and decoded results extracted from the radio recordings within the dataset. It will search whole dataset for JSON files and promt user to pick one of them.
 
 While providing valuable insights into the wireless traffic, it's important to note that we used our own methods to decode the data and the results may not fully represent all traffic present. For instance, PSK demodulation, commonly used by Bluetooth devices, is not done in our processing and thus not included in the results.
 
