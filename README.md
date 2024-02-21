@@ -93,7 +93,7 @@ header: None
 | packet_hec     | Header HEC field                                     |
 | packet_id      | Is the packet ID packet?                             |
 | header_fec     | Ratio of header FEC 1/3 bits, which are equal (higher number - more likely decoding is correct)|
-| clock          | Starting sample in sample file for demodulated packet (left + demod_start)|
+| clock          | Starting sample in sample_file for demodulated packet (left + demod_start)|
 | lap            | LAP (lower address part)                             |
 | comment        | Additional comments (if any)                         |
 | header         | Packet header                                        |
