@@ -72,28 +72,28 @@ header: None
 
 | Field          | Description                                          |
 |----------------|------------------------------------------------------|
-| Packet         | Packet number detected within radio recording        |
-| sample_file    | Path to the sample file containing the origin recording |
-| left           | Starting sample in sample_file for this packet       |
-| right          | Ending sample in sample_file for this packet         |
-| length         | right - left, length of packet in samples            |
-| signal_max     | Maximum amplitude of detected packet                 |
-| signal_mean    | Signal mean                                          |
-| payload_std    | Standard deviation of the payload                    |
+| Packet         | Signal number detected within radio recording        |
+| sample_file    | Path to the sample file containing the recording |
+| left           | Starting sample in sample_file for this signal       |
+| right          | Ending sample in sample_file for this signal         |
+| length         | right - left, length of signal in samples            |
+| signal_max     | Maximum amplitude of detected signal                 |
+| signal_mean    | Signal mean amplitude                                |
+| payload_std    | Standard deviation of the signal amplitude (if only GFSK modulated is used, deviation is smaller). Calculated only if sufficient overall lenght of signal for payload EDR payload |
 | index_25       | Which of the four 25 MHZ channelized recordings      |
 | index_5        | Which of the five 5 MHZ channelized recordings       |
-| local_freq     | Local frequency in the channelized radio data        |
-| demod_start    | Sample index when was GFSK demod started             |
+| local_freq     | Local frequency within the 5MHz sample file |
+| demod_start    | Offset of perfomed GFSK demodulation start from the signal start|
 | bits           | Decoded bits (if available)                          |
-| packet_lt_addr | Bluetooth logical transport address                  |
+| packet_lt_addr | Bluetooth logical transport address (LT_ADDR)        |
 | packet_type    | Header TYPE field                                    |
 | packet_flow    | Header FLOW field                                    |
 | packet_arqn    | Header ARQN field                                    |
 | packet_seqn    | Header SEQN field                                    |
 | packet_hec     | Header HEC field                                     |
-| packet_id      |                                                      |
-| header_fec     |                                                      |
-| clock          |                                                      |
+| packet_id      | Is the packet ID packet?                             |
+| header_fec     | Ratio of header FEC 1/3 bits, which are equal (higher number - more likely decoding is correct)|
+| clock          | Starting sample in sample file for demodulated packet (left + demod_start)|
 | lap            | LAP (lower address part)                             |
 | comment        | Additional comments (if any)                         |
 | header         | Packet header                                        |
