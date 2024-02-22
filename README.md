@@ -1,5 +1,5 @@
 # Bluetooth Wearable Device Dataset
-This repository contains metadata and usage examples of radio recordings from wearable devices, captured using SDR in an RF isolated environment. The raw data recordings can be accessed from ... . Each recording is accompanied by its own metadata file (top.yaml), detailing its production process and parameters and JSON file which contains decoded bits and information regarding its Bluetooth parameters.
+This repository contains metadata and usage examples of radio recordings from wearable devices, captured using SDR in an RF isolated environment. The raw data recordings can be accessed from https://pubfaili.edi.lv:58043/s/FdpdFERkGXpCc2X . Each recording is accompanied by its own metadata file (top.yaml), detailing its production process and parameters and JSON file which contains decoded bits and information regarding its Bluetooth parameters.
 
 ## Example usage
 This repository provides two usage examples tailored to visualize the dataset. For practical demonstrations, smaller sample files are located within the _example_radio_data/ folder. These 2 useage examples will also work with the rest of the dataset.
