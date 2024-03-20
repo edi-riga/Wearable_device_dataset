@@ -25,7 +25,7 @@ def draw_fft(data, sample_rate, file_path, center_frequency):
     plt.figure(figsize=(12, 5))
     plt.plot(freq_axis_shifted, np.abs(fft_result))
     plt.xlabel('Frequency (Hz)')
-    plt.ylabel('Amplitude')
+    plt.ylabel('Amplitude (dB)')
     plt.grid()
     # plt.title(f'FFT - {file_path}')
     plt.title("FFT")
