@@ -3,6 +3,7 @@ import numpy as np
 import sys
 import os
 import matplotlib.pyplot as plt
+from matplotlib.ticker import ScalarFormatter
 
 def load_data_from_file(file_path, file_format, sample_rate):
     return np.fromfile(file_path, dtype=file_format), sample_rate
@@ -10,25 +11,29 @@ def load_data_from_file(file_path, file_format, sample_rate):
 def draw_waveform(data, sample_rate, file_path, start_time):
     # Generate time axis based on sample rate and data length
     time_axis = np.arange(start_time, start_time + len(data) / sample_rate, 1 / sample_rate)[:len(data)]
-    plt.figure(figsize=(12, 5))
-    plt.plot(time_axis, np.real(data))  # Assuming complex data; you can modify this based on your data type
-    plt.xlabel('Time (seconds)')
-    plt.ylabel('Amplitude')
-    plt.grid()
+    fig, ax = plt.subplots(figsize=(12, 5))
+    ax.plot(time_axis, np.real(data))  # Assuming complex data; you can modify this based on your data type
+    ax.xaxis.set_major_formatter(ScalarFormatter(useMathText=True))
+    ax.yaxis.set_major_formatter(ScalarFormatter(useMathText=True))
+    ax.set_xlabel('Time (seconds)')
+    ax.set_ylabel('Amplitude')
+    ax.grid()
+    ax.set_title("Waveform")
     # plt.title(f'Waveform - {file_path}')
-    plt.title("Waveform")
 
 def draw_fft(data, sample_rate, file_path, center_frequency):
     fft_result = np.fft.fft(data)
     freq_axis = np.fft.fftfreq(len(fft_result), 1 / sample_rate)
     freq_axis_shifted = freq_axis + center_frequency
-    plt.figure(figsize=(12, 5))
-    plt.plot(freq_axis_shifted, np.abs(fft_result))
-    plt.xlabel('Frequency (Hz)')
-    plt.ylabel('Amplitude (dB)')
-    plt.grid()
-    # plt.title(f'FFT - {file_path}')
-    plt.title("FFT")
+    fig, ax = plt.subplots(figsize=(12, 5))
+    ax.plot(freq_axis_shifted, np.abs(fft_result))
+    ax.xaxis.set_major_formatter(ScalarFormatter(useMathText=True))
+    ax.yaxis.set_major_formatter(ScalarFormatter(useMathText=True))
+    ax.set_xlabel('Frequency (Hz)')
+    ax.set_ylabel('Amplitude (dB)')
+    ax.grid()
+    ax.set_title("FFT")
+    # ax.set_title(f'FFT - {file_path}')
 
 def main():
     if len(sys.argv) != 2:
