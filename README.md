@@ -140,3 +140,20 @@ header: None
 #### Channelized Data
 
 - Information about the channelized data. 
+
+## Citing the dataset
+If you are publishing academic work and you wish to cite this dataset, please cite original article:
+
+BibTeX:
+```
+@article{rusins2024wearable,
+  title={Wearable Device Bluetooth/BLE Physical Layer Dataset},
+  author={Rusins, Artis and Tiscenko, Deniss and Dobelis, Eriks and Blumbergs, Eduards and Nesenbergs, Krisjanis and Paikens, Peteris},
+  journal={Data},
+  volume={9},
+  number={4},
+  pages={53},
+  year={2024},
+  publisher={MDPI}
+}
+```
